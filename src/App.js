@@ -21,14 +21,14 @@ function App() {
 
   // Functions
   const getTodos = () => {
-    fetch(`http://localhost:3000/todos/${user.id}`)
+    fetch(`https://todolistapi-td.herokuapp.com/todos/${user.id}`)
 			.then(response => response.json())
       .then(todos => setTodos(todos.todos))
       .catch(err => console.log(err));    
   }
 
   const saveTodos = () => {
-    fetch('http://localhost:3000/todos', {
+    fetch('https://todolistapi-td.herokuapp.com/todos', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({
