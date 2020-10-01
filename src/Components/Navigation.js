@@ -1,11 +1,12 @@
 import React from 'react';
 
 
-const Navigation = ({ saveTodos, setUser, isSignedIn, setIsSignedIn }) => {
+const Navigation = ({ saveTodos, setUser, setTodos, isSignedIn, setIsSignedIn }) => {
 
     const handleSignOut = () => {
 		setIsSignedIn(false);
 		setUser({id: "", name: ""});
+		setTodos([]);
 	}
 
 	if(isSignedIn) {

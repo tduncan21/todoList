@@ -67,7 +67,7 @@ function App() {
   return (
     <Router>
       <div className="App">    
-        <Navigation saveTodos={saveTodos} setUser={setUser} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /> 
+        <Navigation saveTodos={saveTodos} setUser={setUser} setTodos={setTodos} isSignedIn={isSignedIn} setIsSignedIn={setIsSignedIn} /> 
         <header>
           <h1>{isSignedIn ? user.name : ""} Todo List</h1>
         </header>
